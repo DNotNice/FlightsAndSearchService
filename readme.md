@@ -6,7 +6,7 @@
   - Create a `.env` file in the root directory and add the following environment variable
       - `PORT =3001`
   - Inside the `src/config` folder a new file `config.json` and then add the following pieceo of json 
-     ```
+   ```
   {
        "development": {
     "username": "<YOUR_DB_LOGIN_NAME>",
@@ -17,14 +17,15 @@
       }
    }
    ```
-   ONCE you have added your db config as listed above , go the src folder from your terminal and execute `npx sequelize db:create`.
+   ONCE you have added your db config as listed above , go the src folder from your terminal and execute  `npx sequelize db:create`.
    
-   ```
+  
 ## DB DESIGN
    - Airplane Table
    - Flight
    - Airport
    - City
+
 
    - A flight belongs to an airplane but one can be used in multiple flights
    - A city has many airports but one airport belongs to a city
