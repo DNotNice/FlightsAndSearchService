@@ -1,4 +1,4 @@
-# WELCOME TO FILGHTS SERVICE 
+# WELCOME TO FLIGHTS SERVICE 
  
  ## PROJECT SETUP
   - clone the project on your local
@@ -17,7 +17,8 @@
       }
    }
    ```
-   ONCE you have added your db config as listed above , go the src folder from your terminal and execute  `npx sequelize db:create`.
+   ONCE you have added your db config as listed above , go the src folder from your terminal and execute  `npx sequelize db:create` and then 
+   execute `npx sequelize db:migrate`
    
   
 ## DB DESIGN
