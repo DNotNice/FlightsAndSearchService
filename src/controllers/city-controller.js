@@ -84,6 +84,27 @@ const update = async (req,res) => {
         })
     }
 }
+
+const getAll = async(req , res) =>{
+    try {
+         const city = await cityService.getAllCities();
+         return res.status(201).json({
+            data: city ,
+            success : true ,
+            message : 'sucessfully fetched all cities',
+            err :{}
+         })
+    } catch (error) {
+        console.log("error at controller level");
+        return res.status(500).json({
+            data :{},
+            success : false ,
+            message : 'Not able to fetch the cities',
+            error :error    
+        })
+        
+    }
+}
 module.exports = {
-    create , destroy , update , get
+    create , destroy , update , get , getAll
 }
