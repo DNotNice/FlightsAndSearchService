@@ -18,7 +18,7 @@ module.exports = {
      cityId : 9,
    createdAt : new Date(),
     updatedAt : new Date()
-   },
+  },
    {
     name : 'Mengaluru International Airport',
     cityId : 9,
