@@ -1,9 +1,12 @@
 const {Flights} = require('../models/index');
-
+const{compareTime} = require('../utils/helper')
 
 class FlightRepository{
     async createFlight(data){
         try {
+            if(!compareTime(data.arrivalTime , data.departureTime)){
+               throw {error : 'arrival time cannot be less than departure time'};
+            }
             const flight = await Flights.create(data);
             return flight;
         } catch (error) {
