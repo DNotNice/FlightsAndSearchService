@@ -9,9 +9,10 @@ class CrudService{
             
         } catch (error) {
             console.log("something went wrong in the crud service");
-            throw {error};
+            throw error;
         }
-    }
+        }
+    
     async destroy(id){
         try {
             const response = await this.repository.destroy(id);

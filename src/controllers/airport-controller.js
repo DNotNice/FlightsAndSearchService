@@ -1,5 +1,6 @@
 const {AirportService} = require('../services/index');
  const airportService = new AirportService();
+
 const create = async (req ,res)=>{
     try {
         const response = await airportService.create(req.body);
@@ -8,9 +9,10 @@ const create = async (req ,res)=>{
             err :{},
             data :response ,
             success : true
-        })
+        });
     } catch (error) {
         console.log('something went wrong int the airport controller');
+        console.log(error);
         return res.status(500).json({
             data:{} ,
             success:false ,
